@@ -1,0 +1,54 @@
+create table supplier(sid varchar2(10) primary key,  sname varchar(2) , rating number(10) ,address varchar2(40));
+insert into table values('AB', 'Kanishk',5,'Mathura');
+insert into supplier values('AB', 'Kanishk',5,'Mathura');
+insert into supplier values('AB', 'Kani',5,'Mathura');
+alter table supplier modify(sname varchar2(20));
+insert into supplier values('CD', 'Ka',5,'Mathura');
+alter table supplier modify(sname not null);
+insert into supplier values('AA', 'Ritik',6,'Agra');
+insert into supplier values('BB', 'Rahul',12,'Pakistan');
+insert into supplier values('CC', 'Rohit',15,'GLA');
+
+select *from supplier;
+
+create table part (pid varchar2(10) primary key, pName varchar2(10) ,color varchar2(10));
+insert into part values('P1','Pen','green');
+insert into part values('P2','Pencil','Red');
+insert into part values('P3','Keyboard','Red');
+
+
+create table catalog(sid varchar2(10) referenced supplier(sid),pid varchar2(10) referenced part(pid) , cost number(10));
+
+insert into catalog values('AA','P1',200);
+insert into catalog values('BB','P2',500);
+insert into catalog values('CC','P3',800);
+
+select *from catalog;
+ 
+Sec E- questions--> 
+
+// find pname whose rating > 10;
+select pname  from part where pid in(select pid from 
+catalog where sid in (select sid from supplier where rating>10));
+
+// find sname who supplied part having cost >10;
+select sname from supplier where sid in(select sid from catalog where cost>10);
+
+
+// find sid who supplied part 'Keyboard';
+select sid from catalog where pid in (select pid from part where pname='Keyboard');
+
+
+Sec A ques---->
+
+//Find the sid who supplied some red or green part 
+select sid from supplier where sid in (select sid from catalog where pid in (select pid from part where color in('green','Red')));
+
+//find the sid who suplied  part having cost >10;
+select sid from supplier group by sid  having  sid in (select sid from catalog where cost>10);
+
+// find the sid of the supplier whose rating >10
+select sid from supplier where rating >10;
+
+
+

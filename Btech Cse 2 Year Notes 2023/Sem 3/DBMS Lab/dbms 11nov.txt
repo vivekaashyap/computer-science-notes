@@ -1,0 +1,41 @@
+select 3.14*3.14 from dual;   // to multiply 
+select 8/2 from dual;            // divide
+desc dual
+
+select sysdate from dual               //show date of the system
+select abs(-2) from dual              // absolute value
+select power(7,3) from dual          // 7 to pow 3
+select  
+
+select sqrt(25) from dual       // square root value of 25
+select round(sqrt(20)) from dual   // round value
+ 
+select exp(5) from dual          // exponential of 5
+select extract(month from sysdate) from dual          // extract month from the date
+
+select mod(15,7) from dual    // modulous of 15%7
+select LOWER('KANISHK') from dual
+
+select substr('kanishk',4) from dual
+select substr('kanishk patel',2,5) from dual
+
+select length('Kanishk') from dual   // length of the string 
+select to_char(sysdate,'DD,MM,YYYY') from dual
+select to_char(sysdate,'DD') from dual
+
+select to_char(to_date('08-15-1947'),'DY') from dual  // extract day name of 15 aug 1947
+
+select to_char(sysdate,'W') from dual    // W week of the month
+select to_char(sysdate,'WW') from dual    // ww week of the year
+select to_char(sysdate,'mi') from dual    // minute
+select to_char(sysdate,'hh:mi:ss') from dual  // time
+select to_char(sysdate,'hh24:mi:ss') from dual  // hour in 24
+select to_char(sysdate,'hh24:mi:ss am') from dual  // am or pm
+
+select sysdate,last_day(sysdate) from dual  //system date and last date
+select sysdate,next_day(sysdate,'Monday') from dual  // next monday 
+select sysdate+4 from dual                  // increment +4 in today's date
+
+select to_date('23/07/1988','DD/MM/YYYY') from dual  // convert string to date
+
+

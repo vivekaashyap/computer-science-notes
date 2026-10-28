@@ -1,0 +1,72 @@
+package com.functional;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+@FunctionalInterface
+interface Hello{
+	//public void sayHello();
+	//public int add(int x, int y);
+	public int DOUBLE(int x);
+}
+
+public class Main  {	
+	
+public static void main(String[] args) {	
+  
+//	Hello h =   () -> {
+//		  System.out.println("Say hello function...");
+//	  };
+	//Hello h = () ->  System.out.println("Say hello function...");
+	
+	 // h.sayHello();
+	
+	
+//	Hello h =   (a,b) -> {
+//		  int z = a+b;
+//		  return z;
+//	  };
+//	  
+//	  System.out.println(h.add(10, 30));
+
+//	Hello h = (a)-> {
+//		return a*2;
+//	};
+	
+//	Hello h = a -> {
+//		return a*2;
+//	};
+	
+	
+	
+//	Hello h = a ->  a*2;
+//	
+//	System.out.println(h.DOUBLE(89));
+	
+	
+	
+	ArrayList<Integer> ls = new ArrayList<>();
+	ls.add(23);
+	ls.add(30);
+	ls.add(45);
+	ls.add(78);
+	ls.add(88);
+	ls.add(69);
+	
+	
+	
+List<Integer> a = 	ls.stream().filter(i -> i<50).collect(Collectors.toList());
+	
+	System.out.println(a);
+	
+Long ab = 	ls.stream().filter(i -> i<50).count();
+	
+	System.out.println(ab);	
+	
+List<Integer> ac = 	ls.stream().map(i -> i+5).collect(Collectors.toList());
+	
+	System.out.println(ac);	
+	
+}
+}

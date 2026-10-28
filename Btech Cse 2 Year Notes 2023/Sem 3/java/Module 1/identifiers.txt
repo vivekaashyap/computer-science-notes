@@ -1,0 +1,238 @@
+Identifier :
+
+A name in java program is called identifier. It may be class name, method name,
+variable name and label name.
+
+Rules to define java identifiers:
+Rule 1: The only allowed characters in java identifiers are:
+1) a to z
+2) A to Z
+3) 0 to 9
+4) _ (underscore)
+5) $
+
+Rule 2: If we are using any other character we will get compile time error.
+Example: 
+1) total_number-------valid
+2) Total#------------------invalid
+
+Rule 3: identifiers are not allowed to starts with digit.
+Example:
+1) ABC123---------valid
+2) 123ABC---------invalid
+Rule 4: java identifiers are case sensitive up course java language itself treated as case
+sensitive language.
+Example:
+class Test{
+int number=10;
+int Number=20;
+int NUMBER=20; we can differentiate with case.
+int NuMbEr=30;
+}
+
+Rule 5: There is no length limit for java identifiers 
+but it is not recommended to take
+more than 15 lengths.
+
+Rule 6: We can't use reserved words as identifiers.
+Example:
+int if=10; --------------invalid
+
+
+Rule 7: All predefined java class names and interface names 
+we use as identifiers.
+
+Example 1:
+class Test
+{
+public static void main(String[] args){
+int String=10;
+System.out.println(String);
+}}
+Output:
+10
+
+
+
+
+Example 2:
+class Test
+{
+public static void main(String[] args){
+int Runnable=10;
+System.out.println(Runnable);
+}}
+Output:
+10
+
+
+
+
+
+Even though it is legal to use class names and interface names 
+as identifiers but it is not
+a good programming practice.
+
+
+
+Which of the following are valid java identifiers?
+
+_$_
+ca$h
+java2
+java_2_share
+all@hands
+1234abc
+total#
+int
+integer
+Int
+total1020
+
+
+
+			Reserved words:
+
+In java some identifiers are reserved to associate some 
+functionality or meaning such type of reserved identifiers 
+are called reserved words.
+Diagram: reserved-words.png
+
+Reserved words for data types: (8)
+1) byte
+2) short
+3) int
+4) long
+5) float
+6) double
+7) char
+8) boolean
+Reserved words for flow control:(11)
+1) if
+2) else
+3) switch
+4) case
+5) default
+6) for
+7) do
+8) while
+9) break
+10) continue
+11) return
+Keywords for modifiers:(11)
+1) public
+2) private
+3) protected
+4) static
+5) final
+6) abstract
+7) synchronized
+8) native
+9) strictfp(1.2 version)
+10) transient
+11) volatile
+Keywords for exception handling:(6)
+1) try
+2) catch
+3) finally
+4) throw
+5) throws
+6) assert(1.4 version)
+Class related keywords:(6)
+1) class
+2) package
+3) import
+4) extends
+5) implements
+6) interface
+Object related keywords:(4)
+1) new
+2) instanceof
+3) super
+4) this
+
+Void return type keyword:
+
+If a method won't return anything compulsory 
+that method should be declared with the
+void return type in java but it is optional in C++. 
+
+
+Unused keywords:
+goto: Create several problems in old languages and hence it is 
+banned in java.
+Const: Use final instead of this.
+By mistake if we are using these keywords in our program we will 
+get compile time
+error.
+
+
+Reserved literals:
+1) true values for boolean data type.
+2) false
+3)null----------------- default value for object reference.
+
+
+
+
+Enum:
+This keyword introduced in 1.5v to define a group of named constants
+Example:
+enum Beer
+{
+KF, RC, KO, FO;
+}
+
+
+
+
+
+Conclusions :
+1. All reserved words in java contain only lowercase alphabet symbols.
+2. New keywords in java are:
+3. strictfp-----------1.2v
+4. assert-------------1.4v
+5. enum--------------1.5v
+6. In java we have only new keyword but not delete because destruction of useless
+objects is the responsibility of Garbage Collection.
+
+
+7. instanceof but not instanceOf
+8. strictfp but not strictFp
+9. const but not Constant
+10. syncronized but not syncronize
+11. extends but not extend
+12. implements but not implement
+13. import but not imports
+14. int but not Int
+
+
+Which of the following list contains only java reserved words ?
+1. final, finally, finalize  
+2. throw, throws, thrown
+3. break, continue, return, exit
+4. goto, constant(invalid) 
+5. byte, short, Integer, long
+6. extends, implements, imports
+7. finalize, synchronized
+8. instanceof, sizeOf
+9. new, delete(invalid) 
+10. None of the above
+
+
+Which of the following are valid java keywords?
+1. public
+2. static
+3. void
+4. main
+5. String
+6. args
+
+
+
+
+
+
+
+
+

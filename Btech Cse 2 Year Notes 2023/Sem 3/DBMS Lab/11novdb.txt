@@ -1,0 +1,24 @@
+create view empview as select ename,deptno from emp
+select *from emp
+select * from empview
+describe empview
+
+create view deptview as select deptno , dname from dept
+select * from deptview
+descrive deptview
+
+//waq  to update employee view update smith's deptname no 30
+update empview set deptno=30 where ename='SMITH'
+select * from empview
+                                                                         
+
+// insert data
+select ename,emp.deptno,loc,job from emp ,dept where emp.deptno=dept.deptno
+// for create view
+create or replace view empdept as select ename,emp.deptno,loc,job from emp ,dept where emp.deptno=dept.deptno
+
+create view emp2view as (select ename from emp) with read only
+
+drop view emp2view
+   
+

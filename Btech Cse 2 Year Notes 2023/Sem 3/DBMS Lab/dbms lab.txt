@@ -1,0 +1,17 @@
+select *from emp;
+select ename from emp where deptno =(select deptno from emp where ename = 'BLAKE');
+select ename from emp where deptno =(select deptno from emp where ename = 'BLAKE') and ename !='BLAKE';
+
+// write a query to display names of all employee who works in new york 
+select * from dept;
+select ename from emp where deptno=(select deptno from dept where loc='NEW YORK');
+
+// waq to display names of all employee who works as manager 
+select ename from emp where empno=(select mgr from emp );
+
+// waq to display name of the employee earning highest salary
+select ename from emp where sal=(select max(sal) from emp); 
+
+//waq to display those department no whose average salary is greatest than the salary of smith
+select deptno,avg(sal) from emp group by deptno 
+having avg(sal)>(select  sal from  emp where 
