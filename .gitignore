@@ -1,0 +1,59 @@
+# Video and audio files
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.wmv
+*.webm
+*.mp3
+*.wav
+*.m4a
+
+# Large archives and disk images
+*.zip
+*.rar
+*.7z
+*.iso
+*.dmg
+*.vhd
+*.vhdx
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node.js
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Operating system files
+$RECYCLE.BIN/
+System Volume Information/
